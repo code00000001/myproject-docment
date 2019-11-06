@@ -199,6 +199,9 @@ yum install ruby
 yum install rubygems
 gem install redis 
 
+报错redis requires Ruby version >= 2.3.0
+解决方案
+https://blog.csdn.net/weixin_41836393/article/details/94848178
 ```
 
 
@@ -207,6 +210,9 @@ gem install redis
 
 ```shell
 /usr/local/redis-cluster/bin/redis-trib.rb create --replicas 1 192.168.9.4:9001 192.168.9.4:9002 192.168.9.4:9003 192.168.9.4:9004 192.168.9.4:9005 192.168.9.4:9006
+
+提示要换命令
+redis-cli --cluster create 192.168.9.4:9001 192.168.9.4:9002 192.168.9.4:9003 192.168.9.4:9004 192.168.9.4:9005 192.168.9.4:9006 --cluster-replicas 1
 
 简单解释一下这个命令：调用 ruby 命令来进行创建集群，--replicas 1 表示主从复制比例为 1:1，即一个主节点对应一个从节点；然后，默认给我们分配好了每个主节点和对应从节点服务，以及 solt 的大小，因为在 Redis 集群中有且仅有 16383 个 solt ，默认情况会给我们平均分配，当然你可以指定，后续的增减节点也可以重新分配。
 
