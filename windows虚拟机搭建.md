@@ -61,7 +61,8 @@ NAT gateway address<br/>
 ip = 172.16.80.2<br/>
 netmask = 255.255.255.0<br/><br/>
 
-mac的子网掩码，dns路由器在系统偏好设置网络里<br/>
+mac的子网掩码，dns路由器在系统偏好设置网络里<br/><br/>
+更详细配置参考https://garryshield.github.io/2016/11/01/mac-vmware-network/ <br/><br/>
 
 ```xml
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
