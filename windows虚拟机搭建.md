@@ -45,6 +45,21 @@
 ## 配置虚拟机，初始化配置
 
 1、配置网络
+mac的vmnet8， nat虚拟网卡地址
+https://blog.csdn.net/qq_35583154/article/details/94555128
+执行如下命令进行查找
+find / -name vmnet8
+终于查找到了他的位置
+
+/Library/Preferences/VMware Fusion/vmnet8
+但这个路径直接复制粘贴是进不去的，可以通过如下命令直接进入
+
+cd /Library/Preferences/VMware\ Fusion/vmnet8
+进入之后，打开nat.conf文件就可以查看到vmnet8的网关地址
+
+# NAT gateway address
+ip = 172.16.80.2
+netmask = 255.255.255.0
 
 ```xml
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
