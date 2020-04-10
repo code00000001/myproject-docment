@@ -57,9 +57,11 @@ find / -name vmnet8
 cd /Library/Preferences/VMware\ Fusion/vmnet8
 进入之后，打开nat.conf文件就可以查看到vmnet8的网关地址
 
-# NAT gateway address
+NAT gateway address
 ip = 172.16.80.2
 netmask = 255.255.255.0
+
+mac的子网掩码，dns路由器在系统偏好设置网络里
 
 ```xml
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
