@@ -45,7 +45,7 @@
 ## 配置虚拟机，初始化配置<br/>
 
 1、配置网络<br/>
-mac的vmnet8， nat虚拟网卡地址<br/>
+mac的vmnet8， nat虚拟网卡网关地址<br/>
 https://blog.csdn.net/qq_35583154/article/details/94555128<br/><br/>
 执行如下命令进行查找<br/>
 find / -name vmnet8<br/>
@@ -62,7 +62,7 @@ ip = 172.16.80.2<br/>
 netmask = 255.255.255.0<br/><br/>
 
 mac的子网掩码，dns路由器在系统偏好设置网络里<br/><br/>
-更详细配置参考https://garryshield.github.io/2016/11/01/mac-vmware-network/ <br/><br/>
+虚拟网卡子网ip更详细配置参考https://garryshield.github.io/2016/11/01/mac-vmware-network/ <br/><br/>
 
 ```xml
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
